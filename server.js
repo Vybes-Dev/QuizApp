@@ -10,20 +10,6 @@ const path = require("path");
 server.use(cors());
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
-// db connection
-mongoose
-  .connect(config.db.url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
-  .then(() => {
-    console.log("connected to db successfully ...");
-  })
-  .catch(err => {
-    console.log(err);
-    console.log("failed to connect to db ...");
-  });
-server.use("/api/quiz", quizRouter);
 
 server.use(express.static("./views"));
 
