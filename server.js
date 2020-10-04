@@ -2,8 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const server = express();
 const config = require("./config");
-const mongoose = require("mongoose");
-const quizRouter = require("./routes/quiz.route");
 const cors = require("cors");
 const path = require("path");
 
